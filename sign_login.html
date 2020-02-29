@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sign_Login</title>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+			<meta charset="utf-8">
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			
+		<style>
+			body{
+				background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('sidebar-1.jpg');
+				background-size:{
+					 cover;height:100vh
+				}
+				  
+			}
+			
+			#fname, #lname, #mailid1, #mob, #mailid2, #pass{
+				border-color:2px solid-black;
+				color:solid-black 5px;
+				width:85%;height:35px;
+				margin:auto;
+				margin-top:10px;border-radius:12px
+			}
+			#btn1{
+				width:85%;
+				margin:auto;
+				margin-top:10px;border-radius:20px;
+				font-family:cursive;text-align:center;
+				background-color:#2f4f4f;
+				color:white
+			}
+			#btn2{
+				width:85%;
+				margin:auto;
+				margin-top:10px;border-radius:20px;
+				font-family:cursive;text-align:center;
+				background-color:#2f4f4f;
+				color:white
+			}
+			.main-div{
+				background-color:rgba(240,255,240, 0.3);;padding:50px;
+				margin-top:80px;
+				border-radius:20px;
+				height:auto;
+				padding-bottom:30px;
+				
+			}
+			.message1, .message2{
+				margin-left:34px;
+				color:white
+			}
+			#anc1, #anc2{
+				color:black;
+				margin-left:12px
+			}
+			#anc2:hover,#anc1:hover{
+				color:#00008b
+			}
+			#btn1:hover,#btn1:active{
+				background:#696969
+			}
+			#btn2:hover,#btn1:active{
+				background:#696969
+			}
+			.register-form{
+				display:none;
+			}
+			
+		</style>	
+			
+	</head>
+	
+	<body>
+		
+		<div class="container">
+		<div class="row">
+		
+		<div class="col-4"></div>
+		
+		<div class="col-4 main-div">
+		
+		
+		
+		<div class="registeration">
+			<div class="form">
+				<form class="register-form">
+					<input class="form-control" type="text" id="fname" value="" placeholder="FIRST NAME">
+					<input class="form-control" type="text" id="lname" value="" placeholder="LAST NAME">
+					<input class="form-control" type="email" id="mailid1" value="" placeholder="EMAIL">
+					<input class="form-control" type="number" id="mob" value="" placeholder="MOBILE">
+					<input class="form-control" id="btn1" type="button" value="Register" >
+					<p class="message1">Already Registered <a id="anc1" href="#"> Login</a></p>
+				</form>
+			
+				<form class="login-form">
+					<input class="form-control" type="email" id="mailid2" value="" placeholder="EMAIL">
+					<input class="form-control" type="password" id="pass" value="" placeholder="PASSWORD">
+					<button class="form-control" id="btn2">Login</button>
+					<p class="message2">Not Registered?<a id="anc2" href="#"> SignIn</a></p>
+					
+					
+				</form>
+			</div>
+		</div>
+		
+		
+		</div>
+		
+		<div class="col-4"></div>
+		
+		</div>
+		</div>
+		
+				<script>
+					$(document).ready(function(){
+					$(".message2").click(function(){
+					$('form').animate({height: "toggle", opacity: "toggle"}, "fast");
+					});
+					$(".message1").click(function(){
+					$('form').animate({height: "toggle", opacity: "toggle"}, "fast");
+					});
+					});
+				</script>
+		
+	</body>
+</html>
